@@ -1,0 +1,12 @@
+{
+  "name": "Tik's_Amazing_Bot",
+  "version": "0.0.1",
+  "description": "A bot for Tik to program when he's bored",
+  "author": "TikhonK",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "4.6.1",
+    "node-lame": "^1.0.4"
+  }
+}
