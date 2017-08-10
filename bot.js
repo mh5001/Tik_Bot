@@ -65,18 +65,9 @@ client.on('message', function(message) {
             message.reply(" how the fuck are you gonna listen you moron? Get in a channel!");
         }
     } else if (mess.startsWith(prefix + "skip")) {
-        if (guilds[message.guild.id].skippers.indexOf(message.author.id) === -1) {
-            guilds[message.guild.id].skippers.push(message.author.id);
-            guilds[message.guild.id].skipReq++;
-            if (guilds[message.guild.id].skipReq >= Math.ceil((guilds[message.guild.id].voiceChannel.members.size - 1) / 2)) {
                 skip_song(message);
                 message.reply(" you skipped like a bitch, bitch");
-            } else {
-                message.reply(" I ain't gonna give you permissions to skip bitch, you need: **" + Math.ceil((guilds[message.guild.id].voiceChannel.members.size - 1) / 2) - guilds[message.guild.id].skipReq) = "**  more skip votes!";
-            }
-        } else {
-            message.reply(" fuck off with your skipping you piece of shit");
-        }
+
     } else if (mess.startsWith(prefix + "queue")) {
         var message2 = "```";
         for (var i = 0; i < guilds[message.guild.id].queueNames.length; i++) {
